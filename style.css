@@ -88,6 +88,27 @@ body{
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 8;
 }
+
+h2{
+  position: relative;
+  justify-self: center;
+}
+h2::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 3px;
+  background: linear-gradient(90deg,#FFD800,#FF4500);
+  transform: scaleX(0);
+  transition: 0.3s ease;
+}
+h2:hover::before{
+  transform: scaleX(1);
+}
+
 .profile_footer{
   margin-top: 1.75rem;
   display: flex;
